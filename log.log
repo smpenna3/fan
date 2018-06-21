@@ -1,0 +1,34 @@
+2018-06-20 21:03:56,043 - 24 - INFO - Scheduler setup
+2018-06-20 21:04:01,342 - 24 - INFO - Scheduler setup
+2018-06-20 21:04:30,317 - 24 - INFO - Scheduler setup
+2018-06-20 21:04:30,318 - 37 - ERROR - Could not setup GPIO
+2018-06-20 21:04:31,465 - 24 - INFO - Scheduler setup
+2018-06-20 21:04:31,466 - 37 - ERROR - Could not setup GPIO
+2018-06-20 21:04:38,780 - 54 - INFO - Turning on
+2018-06-20 21:07:56,179 - 25 - INFO - Scheduler setup
+2018-06-20 21:07:56,180 - 38 - ERROR - Could not setup GPIO
+2018-06-20 21:07:56,939 - 25 - INFO - Scheduler setup
+2018-06-20 21:07:56,940 - 38 - ERROR - Could not setup GPIO
+2018-06-20 21:08:06,583 - 55 - INFO - Turning on
+2018-06-20 21:08:11,105 - 55 - INFO - Turning on
+2018-06-20 21:09:22,668 - 27 - INFO - Scheduler setup
+2018-06-20 21:09:22,670 - 40 - ERROR - Could not setup GPIO
+2018-06-20 21:09:23,522 - 27 - INFO - Scheduler setup
+2018-06-20 21:09:23,523 - 40 - ERROR - Could not setup GPIO
+2018-06-20 21:09:26,127 - 57 - INFO - Turning on
+2018-06-20 21:09:29,758 - 57 - INFO - Turning on
+2018-06-20 21:11:50,605 - 25 - INFO - Scheduler setup
+2018-06-20 21:11:50,606 - 38 - ERROR - Could not setup GPIO
+2018-06-20 21:11:51,664 - 25 - INFO - Scheduler setup
+2018-06-20 21:11:51,666 - 38 - ERROR - Could not setup GPIO
+2018-06-20 21:11:52,996 - 55 - INFO - Turning on
+2018-06-20 21:12:05,542 - 44 - INFO - Turning off
+2018-06-20 21:12:05,544 - 48 - DEBUG - Removed scheduler job
+2018-06-20 21:14:52,847 - 25 - INFO - Scheduler setup
+2018-06-20 21:14:52,848 - 38 - ERROR - Could not setup GPIO
+2018-06-20 21:14:53,836 - 25 - INFO - Scheduler setup
+2018-06-20 21:14:53,837 - 38 - ERROR - Could not setup GPIO
+2018-06-20 21:14:55,722 - 55 - INFO - Turning on
+2018-06-20 21:14:55,898 - 72 - INFO - Set timer for 30 minutes
+2018-06-20 21:14:59,685 - 44 - INFO - Turning off
+2018-06-20 21:14:59,686 - 48 - DEBUG - Removed scheduler job
