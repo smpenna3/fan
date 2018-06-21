@@ -25,15 +25,16 @@ s.start()
 logger.info('Scheduler setup')
 
 # Pins for relay lines
-relay1 = 0
-relay2 = 1
-relay3 = 2
-relay4 = 3
+relays = [2, 3, 14, 15]
+
+fan = 2
 
 # Setup GPIO lines
 try:
 	gpio.setmode(gpio.BCM)
 	gpio.setwarnings(False)
+	for i in relays:
+		gpio.setup(i, gpio.OUT)
 except:
 	logger.error('Could not setup GPIO')
 
@@ -49,10 +50,22 @@ def turnOff():
 	except:
 		logger.debug("Didn't find a scheduler job")
 		pass
+	
+	try:
+		gpio.output(fan, 1)
+		logger.into("Turned off fan")
+	except:
+		logger.error("Could not turn off fan GPIO")
 
 # Define function to turn on fan gpio line
 def turnOn():
 	logger.info("Turning on")
+
+	try:
+		gpio.output(fan, 0)
+		logger.info("Turned on fan")
+	except:
+		logger.error("Could not turn on fan GPIO")
 
 @app.route('/', methods=['POST', 'GET'])
 def home():

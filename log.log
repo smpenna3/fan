@@ -32,3 +32,9 @@
 2018-06-20 21:14:55,898 - 72 - INFO - Set timer for 30 minutes
 2018-06-20 21:14:59,685 - 44 - INFO - Turning off
 2018-06-20 21:14:59,686 - 48 - DEBUG - Removed scheduler job
+2018-06-21 09:13:06,059 - 25 - INFO - Scheduler setup
+2018-06-21 09:13:06,061 - 38 - ERROR - Could not setup GPIO
+2018-06-21 09:13:06,501 - 25 - INFO - Scheduler setup
+2018-06-21 09:13:06,501 - 38 - ERROR - Could not setup GPIO
+2018-06-21 09:13:20,166 - 55 - INFO - Turning on
+2018-06-21 09:13:20,244 - 72 - INFO - Set timer for 30 minutes
