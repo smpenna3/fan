@@ -6,6 +6,7 @@ except:
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging
 import traceback
+import datetime as dt
 
 ############## PARAMETERS #############
 # Pins for relay lines
@@ -23,7 +24,7 @@ logger.setLevel(logging.DEBUG)
 fh = logging.FileHandler('log.log')
 fh.setLevel(logging.DEBUG)
 sh = logging.StreamHandler()
-sh.setLevel(logging.INFO)
+sh.setLevel(logging.DEBUG)
 formatter = logging.Formatter('%(asctime)s - %(lineno)s - %(levelname)s - %(message)s')
 fh.setFormatter(formatter)
 sh.setFormatter(formatter)
@@ -75,38 +76,46 @@ def turnOn():
 	except:
 		logger.error("Could not turn on fan GPIO")
 
+# Define function to start a timer
+def setupTimer(minutes):
+	# Check if there is already a timer running
+	if(len(s.get_jobs()) > 0):
+		s.remove_job('turnoff')
+
+	s.add_job(turnOff, 'interval', minutes=minutes, id='turnoff')
+	logger.info('Set timer for ' + str(minutes) + ' minutes')
+
 @app.route('/', methods=['POST', 'GET'])
 def home():
-	s.print_jobs()
 	if request.method == 'POST':
 		if 'on' in request.form:
-			turnOn()
+			turnOn() # Turn on the fan
 
 		elif 'off' in request.form:
-			turnOff()
+			turnOff() # Turn off the fan
 
 		elif 'thirty' in request.form:
-			turnOn()
-
-			# Setup timer
-			s.add_job(turnOff, 'interval', minutes=30, id='turnoff')
-			logger.info('Set timer for 30 minutes')
+			turnOn() # Turn on the fan
+			setupTimer(30) # Start a timer for 30 minutes
 
 		elif 'hour' in request.form:
-			turnOn()
-
-			# Setup timer
-			s.add_job(turnOff, 'interval', hours=1, id='turnoff')
-			logger.info('Set timer for 1 hour')
+			turnOn() # Turn on the fan
+			setupTimer(60) # Start a timer for one hour
 
 		elif 'twohour' in request.form:
-			turnOn()
+			turnOn() # Turn on the fan
+			setupTimer(120) # Start a timer for two hours
 
-			# Setup timer
-			s.add_job(turnOff, 'interval', hours=2, id='turnoff')
-			logger.info('Set timer for 2 hours')
-
-	return render_template('home.html')
+	# Print out the reamining time on any timers on the website
+	try:
+		timeToRun = s.get_jobs()[0].next_run_time
+		now = dt.datetime.now(dt.timezone.utc)
+		diff = (timeToRun - now).seconds + 1
+		logger.debug('Time difference ' + str(diff))
+		timeLeft='Turning off at ' + dt.datetime.strftime(timeToRun, '%I:%M') + ' in ' + str(int((diff/3600.0)))  + ' hours and ' + str(int(round((diff%3600)/60))) + ' minutes.'
+	except:
+		timeLeft='No timer set'
+	return render_template('home.html', timeLeft=timeLeft)
 
 
 if __name__ == '__main__':
