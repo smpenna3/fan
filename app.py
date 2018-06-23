@@ -5,6 +5,17 @@ except:
 	print('RPi.GPIO not found')
 from apscheduler.schedulers.background import BackgroundScheduler
 import logging
+import traceback
+
+############## PARAMETERS #############
+# Pins for relay lines
+relays = [2, 3, 14, 15]
+fan = 2
+
+# Set if debugging is active
+debugSet = False
+#######################################
+#######################################
 
 # Setup logging
 logger = logging.getLogger('mainLog')
@@ -24,12 +35,6 @@ s = BackgroundScheduler(misfire_grace_time=60, max_instances=1, timezone='Americ
 s.start()
 logger.info('Scheduler setup')
 
-# Pins for relay lines
-relays = [2, 3, 14, 15]
-fan = 2
-
-# Set if debugging is active
-debugSet = True
 # Setup GPIO lines
 try:
 	gpio.setmode(gpio.BCM)
@@ -38,6 +43,7 @@ try:
 		gpio.setup(i, gpio.OUT)
 except:
 	logger.error('Could not setup GPIO')
+	logger.error(traceback.print_exc())
 
 app = Flask(__name__)
 
@@ -54,9 +60,10 @@ def turnOff():
 	
 	try:
 		gpio.output(fan, 1)
-		logger.into("Turned off fan")
+		logger.info("Turned off fan")
 	except:
 		logger.error("Could not turn off fan GPIO")
+		logger.error(traceback.print_exc())
 
 # Define function to turn on fan gpio line
 def turnOn():

@@ -42,3 +42,35 @@
 2018-06-21 19:38:35,179 - 39 - ERROR - Could not setup GPIO
 2018-06-21 19:38:36,440 - 25 - INFO - Scheduler setup
 2018-06-21 19:38:36,441 - 39 - ERROR - Could not setup GPIO
+2018-06-23 21:46:08,715 - 25 - INFO - Scheduler setup
+2018-06-23 21:46:20,191 - 25 - INFO - Scheduler setup
+2018-06-23 21:46:34,041 - 63 - INFO - Turning on
+2018-06-23 21:46:34,045 - 67 - INFO - Turned on fan
+2018-06-23 21:46:36,552 - 46 - INFO - Turning off
+2018-06-23 21:46:36,556 - 52 - DEBUG - Didn't find a scheduler job
+2018-06-23 21:46:36,558 - 59 - ERROR - Could not turn off fan GPIO
+2018-06-23 21:50:39,426 - 25 - INFO - Scheduler setup
+2018-06-23 21:50:50,724 - 25 - INFO - Scheduler setup
+2018-06-23 21:50:54,766 - 63 - INFO - Turning on
+2018-06-23 21:50:54,769 - 67 - INFO - Turned on fan
+2018-06-23 21:51:44,193 - 46 - INFO - Turning off
+2018-06-23 21:51:44,199 - 52 - DEBUG - Didn't find a scheduler job
+2018-06-23 21:51:44,201 - 59 - ERROR - Could not turn off fan GPIO
+2018-06-23 21:51:53,154 - 63 - INFO - Turning on
+2018-06-23 21:51:53,160 - 67 - INFO - Turned on fan
+2018-06-23 21:51:55,670 - 46 - INFO - Turning off
+2018-06-23 21:51:55,674 - 52 - DEBUG - Didn't find a scheduler job
+2018-06-23 21:51:55,677 - 59 - ERROR - Could not turn off fan GPIO
+2018-06-23 21:52:57,235 - 35 - INFO - Scheduler setup
+2018-06-23 21:53:24,744 - 67 - INFO - Turning on
+2018-06-23 21:53:24,760 - 71 - INFO - Turned on fan
+2018-06-23 21:53:28,999 - 50 - INFO - Turning off
+2018-06-23 21:53:29,008 - 56 - DEBUG - Didn't find a scheduler job
+2018-06-23 21:53:29,011 - 63 - ERROR - Could not turn off fan GPIO
+2018-06-23 21:56:36,456 - 36 - INFO - Scheduler setup
+2018-06-23 21:56:44,804 - 70 - INFO - Turning on
+2018-06-23 21:56:44,809 - 74 - INFO - Turned on fan
+2018-06-23 21:56:47,006 - 52 - INFO - Turning off
+2018-06-23 21:56:47,010 - 58 - DEBUG - Didn't find a scheduler job
+2018-06-23 21:56:47,012 - 65 - ERROR - Could not turn off fan GPIO
+2018-06-23 21:56:47,027 - 66 - ERROR - None
