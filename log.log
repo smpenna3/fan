@@ -319,3 +319,67 @@
 2018-06-23 23:07:06,718 - 53 - INFO - Turning off
 2018-06-23 23:07:06,726 - 59 - DEBUG - Didn't find a scheduler job
 2018-06-23 23:07:06,734 - 64 - INFO - Turned off fan
+2018-06-23 23:08:35,458 - 37 - INFO - Scheduler setup
+2018-06-23 23:09:09,131 - 71 - INFO - Turning on
+2018-06-23 23:09:09,139 - 75 - INFO - Turned on fan
+2018-06-23 23:09:14,337 - 53 - INFO - Turning off
+2018-06-23 23:09:14,343 - 59 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:09:14,349 - 64 - INFO - Turned off fan
+2018-06-23 23:09:22,447 - 71 - INFO - Turning on
+2018-06-23 23:09:22,464 - 75 - INFO - Turned on fan
+2018-06-23 23:09:23,816 - 86 - INFO - Set timer for 30 minutes
+2018-06-23 23:09:23,824 - 114 - DEBUG - Time difference 1800
+2018-06-23 23:09:33,690 - 53 - INFO - Turning off
+2018-06-23 23:09:33,699 - 57 - DEBUG - Removed scheduler job
+2018-06-23 23:09:33,706 - 64 - INFO - Turned off fan
+2018-06-23 23:29:06,664 - 37 - INFO - Scheduler setup
+2018-06-23 23:29:16,952 - 53 - INFO - Turning off
+2018-06-23 23:29:16,960 - 59 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:29:16,964 - 64 - INFO - Turned off fan
+2018-06-23 23:31:57,853 - 37 - INFO - Scheduler setup
+2018-06-23 23:32:55,695 - 37 - INFO - Scheduler setup
+2018-06-23 23:34:07,648 - 37 - INFO - Scheduler setup
+2018-06-23 23:34:30,064 - 72 - INFO - Turning on
+2018-06-23 23:34:30,073 - 76 - INFO - Turned on fan
+2018-06-23 23:34:40,547 - 54 - INFO - Turning off
+2018-06-23 23:34:40,555 - 60 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:34:40,563 - 65 - INFO - Turned off fan
+2018-06-23 23:43:06,986 - 72 - INFO - Turning on
+2018-06-23 23:43:06,999 - 76 - INFO - Turned on fan
+2018-06-23 23:43:09,913 - 54 - INFO - Turning off
+2018-06-23 23:43:09,929 - 60 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:43:09,934 - 65 - INFO - Turned off fan
+2018-06-23 23:44:34,247 - 37 - INFO - Scheduler setup
+2018-06-23 23:45:11,131 - 37 - INFO - Scheduler setup
+2018-06-23 23:45:48,068 - 37 - INFO - Scheduler setup
+2018-06-23 23:46:25,459 - 37 - INFO - Scheduler setup
+2018-06-23 23:47:14,991 - 37 - INFO - Scheduler setup
+2018-06-23 23:47:26,130 - 72 - INFO - Turning on
+2018-06-23 23:47:26,138 - 76 - INFO - Turned on fan
+2018-06-23 23:47:28,875 - 54 - INFO - Turning off
+2018-06-23 23:47:28,884 - 60 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:47:28,891 - 65 - INFO - Turned off fan
+2018-06-23 23:47:31,038 - 54 - INFO - Turning off
+2018-06-23 23:47:31,046 - 60 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:47:31,054 - 65 - INFO - Turned off fan
+2018-06-23 23:47:57,053 - 37 - INFO - Scheduler setup
+2018-06-23 23:48:19,600 - 37 - INFO - Scheduler setup
+2018-06-23 23:48:26,826 - 72 - INFO - Turning on
+2018-06-23 23:48:26,831 - 76 - INFO - Turned on fan
+2018-06-23 23:48:30,984 - 54 - INFO - Turning off
+2018-06-23 23:48:30,992 - 60 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:48:31,001 - 65 - INFO - Turned off fan
+2018-06-23 23:49:09,803 - 37 - INFO - Scheduler setup
+2018-06-23 23:49:13,386 - 54 - INFO - Turning off
+2018-06-23 23:49:13,395 - 60 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:49:13,403 - 65 - INFO - Turned off fan
+2018-06-23 23:49:15,980 - 54 - INFO - Turning off
+2018-06-23 23:49:15,989 - 60 - DEBUG - Didn't find a scheduler job
+2018-06-23 23:49:15,997 - 65 - INFO - Turned off fan
+2018-06-23 23:49:17,964 - 72 - INFO - Turning on
+2018-06-23 23:49:17,972 - 76 - INFO - Turned on fan
+2018-06-23 23:49:19,369 - 87 - INFO - Set timer for 30 minutes
+2018-06-23 23:49:19,378 - 115 - DEBUG - Time difference 1800
+2018-06-23 23:49:26,830 - 54 - INFO - Turning off
+2018-06-23 23:49:26,840 - 58 - DEBUG - Removed scheduler job
+2018-06-23 23:49:26,848 - 65 - INFO - Turned off fan

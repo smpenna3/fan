@@ -42,6 +42,7 @@ try:
 	gpio.setwarnings(False)
 	for i in relays:
 		gpio.setup(i, gpio.OUT)
+	gpio.output(fan, 1) # Start the fan off
 except:
 	logger.error('Could not setup GPIO')
 	logger.error(traceback.print_exc())
