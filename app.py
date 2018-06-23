@@ -26,9 +26,10 @@ logger.info('Scheduler setup')
 
 # Pins for relay lines
 relays = [2, 3, 14, 15]
-
 fan = 2
 
+# Set if debugging is active
+debugSet = True
 # Setup GPIO lines
 try:
 	gpio.setmode(gpio.BCM)
@@ -102,4 +103,4 @@ def home():
 
 
 if __name__ == '__main__':
-	app.run(debug = True)
+	app.run(debug = debugSet, host='0.0.0.0')

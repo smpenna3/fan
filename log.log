@@ -38,3 +38,7 @@
 2018-06-21 09:13:06,501 - 38 - ERROR - Could not setup GPIO
 2018-06-21 09:13:20,166 - 55 - INFO - Turning on
 2018-06-21 09:13:20,244 - 72 - INFO - Set timer for 30 minutes
+2018-06-21 19:38:35,177 - 25 - INFO - Scheduler setup
+2018-06-21 19:38:35,179 - 39 - ERROR - Could not setup GPIO
+2018-06-21 19:38:36,440 - 25 - INFO - Scheduler setup
+2018-06-21 19:38:36,441 - 39 - ERROR - Could not setup GPIO
