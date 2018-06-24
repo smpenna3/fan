@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 try:
 	import RPi.GPIO as gpio
 except:
@@ -87,9 +87,44 @@ def setupTimer(minutes):
 	s.add_job(turnOff, 'interval', minutes=minutes, id='turnoff')
 	logger.info('Set timer for ' + str(minutes) + ' minutes')
 
+@app.route('/on', methods=['POST'])
+def on():
+	if request.method == 'POST':
+		turnOn()
+		return Response(status=200)
+	else:
+		return Response(status=600)
+
+@app.route('/off', methods=['POST'])
+def off():
+	if request.method == 'POST':
+		turnOff()
+		return Response(status=200)
+	else:
+		return Response(status=600)
+
+@app.route('/thirty', methods=['POST'])
+def thirty():
+	if request.method == 'POST':
+		turnOn() # Turn on the fan
+		setupTimer(30) # Set timer for 30 minutes
+		return Response(status=200)
+	else:
+		return Reponse(status=600)		
+
+@app.route('/hour', methods=['POST'])
+def hour():
+	if request.method == 'POST':
+		turnOn() # Turn on the fan
+		setupTimer(60) # Set timer for 30 minutes
+		return Response(status=200)
+	else:
+		return Reponse(status=600)		
+
 @app.route('/', methods=['POST', 'GET'])
 def home():
 	if request.method == 'POST':
+		print(request.data)
 		if 'on' in request.form or 'on' in str(request.data):
 			turnOn() # Turn on the fan
 
