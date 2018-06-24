@@ -7,6 +7,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import logging
 import traceback
 import datetime as dt
+import json
 
 ############## PARAMETERS #############
 # Pins for relay lines
@@ -89,21 +90,21 @@ def setupTimer(minutes):
 @app.route('/', methods=['POST', 'GET'])
 def home():
 	if request.method == 'POST':
-		if 'on' in request.form:
+		if 'on' in request.form or 'on' in str(request.data):
 			turnOn() # Turn on the fan
 
-		elif 'off' in request.form:
+		elif 'off' in request.form or 'off' in str(request.data):
 			turnOff() # Turn off the fan
 
-		elif 'thirty' in request.form:
+		elif 'thirty' in request.form or 'thirty' in str(request.data):
 			turnOn() # Turn on the fan
 			setupTimer(30) # Start a timer for 30 minutes
 
-		elif 'hour' in request.form:
+		elif 'hour' in request.form or 'hour' in str(request.data):
 			turnOn() # Turn on the fan
 			setupTimer(60) # Start a timer for one hour
 
-		elif 'twohour' in request.form:
+		elif 'twohour' in request.form or 'twohour' in str(request.data):
 			turnOn() # Turn on the fan
 			setupTimer(120) # Start a timer for two hours
 
@@ -120,4 +121,5 @@ def home():
 
 
 if __name__ == '__main__':
+	app.logger.addHandler(fh)
 	app.run(debug = debugSet, host='0.0.0.0')
