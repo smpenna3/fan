@@ -152,9 +152,19 @@ def home():
 		timeLeft='Turning off at ' + dt.datetime.strftime(timeToRun, '%I:%M') + ' in ' + str(int((diff/3600.0)))  + ' hours and ' + str(int(round((diff%3600)/60))) + ' minutes.'
 	except:
 		timeLeft='No timer set'
-	return render_template('home.html', timeLeft=timeLeft)
+	try:
+		statusRead = gpio.input(fan)
+		if(statusRead == 0):
+			status = "On"
+		elif(statusRead == 1):
+			status = "Off"
+		else:
+			status = ("Unknown response: " + str(statusRead))
+	except:
+		status = "Could not get fan status"
+	return render_template('home.html', timeLeft=timeLeft, status=status)
 
 
 if __name__ == '__main__':
 	app.logger.addHandler(fh)
-	app.run(debug = debugSet, host='0.0.0.0')
+	app.run(threaded=True, debug = debugSet, host='0.0.0.0')
