@@ -121,6 +121,15 @@ def hour():
 	else:
 		return Reponse(status=600)		
 
+@app.route('/twohour', methods=['POST'])
+def twohour():
+	if request.method == 'POST':
+		turnOn()
+		setupTimer(120)
+		return Response(status=200)
+	else:
+		return Response(status=600)
+
 @app.route('/', methods=['POST', 'GET'])
 def home():
 	if request.method == 'POST':
